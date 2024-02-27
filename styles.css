@@ -5,12 +5,23 @@
 }
 
 body {
-    max-width: 75rem;
-    /* 1200px */
+    max-width: 75rem; /* 1200px */
+    background-color: #202020;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: var(--base-size);
+}
+
+@media (min-width: 576px) {
+    body {
+        background-color: #797979;
+    }
+}
+@media (min-width: 992px) {
+    body {
+        background-color: #e0e0e0;
+    }
 }
 
 .full-padding {
