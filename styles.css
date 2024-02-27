@@ -5,7 +5,8 @@
 }
 
 body {
-    max-width: 75rem; /* 1200px */
+    max-width: 75rem;
+    /* 1200px */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -22,30 +23,22 @@ body {
 
 /* Header */
 .header {
+    background-color: black;
     display: flex;
     flex-direction: column;
-    gap: var(--half-size);
-    background-color: black;
+    gap: var(--base-size);
 }
 
 .header--nav {
-    background-color: #2d4158;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: var(--base-size);
+    background-color: #2d4158;
 }
 
 .header--nav--menu {
     background-color: #eb5454;
     height: var(--base-size);
-}
-
-.header--nav--menu:nth-child(1), .header--nav--menu:nth-child(3) {
-    flex-basis: 20%;
-}
-
-.header--nav--menu:nth-child(2) {
-    width: 100%;
 }
 
 .header--hero {
@@ -57,6 +50,26 @@ body {
     height: var(--base-size);
 }
 
+@media (min-width: 576px) {
+    .header {
+        gap: var(--half-size);
+    }
+
+    .header--nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header--nav--menu:nth-child(1),
+    .header--nav--menu:nth-child(3) {
+        flex-basis: 20%;
+    }
+
+    .header--nav--menu:nth-child(2) {
+        width: 100%;
+    }
+}
+
 /* Main */
 .main {
     background-color: #fffe03;
@@ -66,7 +79,7 @@ body {
 }
 
 .main--section {
-    background-color: #4f4f6a;
+    background-color: #154761;
     display: flex;
     gap: var(--base-size);
     flex-basis: 65%;
@@ -74,25 +87,25 @@ body {
 }
 
 .main--section--article {
-    background-color: #1f6db1;
+    background-color: #5f8691;
     height: var(--base-size);
-    width: 40%;
+    width: 100%;
     flex-grow: 1;
 }
 
 .main--section--bottom {
-    background-color: #71a2c4;
+    background-color: #a2d1c4;
     padding: var(--half-size);
     width: 100%;
 }
 
 .main--aside {
-    background-color: #f63e52;
+    background-color: #f08559;
     flex-basis: 35%;
 }
 
 .main--aside--part {
-    background-color: #feeb84;
+    background-color: #f6af6c;
     height: var(--base-size);
     margin-bottom: var(--half-size);
 }
@@ -101,7 +114,32 @@ body {
     margin-bottom: 0;
 }
 
-@media (min-width: 992px) { /* Large devices */
+@media (min-width: 576px) {
+    .main--section {
+        background-color: #4f4f6a;
+    }
+
+    .main--section--article {
+        background-color: #1f6db1;
+        width: 40%;
+    }
+
+    .main--section--bottom {
+        background-color: #71a2c4;
+    }
+
+    .main--aside {
+        background-color: #f63e52;
+    }
+
+    .main--aside--part {
+        background-color: #feeb84;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* Large devices */
     .main {
         background-color: black;
         flex-direction: row;
